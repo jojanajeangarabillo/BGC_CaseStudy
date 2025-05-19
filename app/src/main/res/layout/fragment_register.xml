@@ -1,146 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D1E9C4"
+    android:fillViewport="true"
     android:padding="16dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_margin="8dp"
-        android:elevation="4dp"
-        android:clipToOutline="true"
-        android:backgroundTint="#FFFFFF"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/form_background">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <!-- Sign Up Header -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="← Sign Up"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="#2C4B1D"
-            android:layout_gravity="start"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/luckybones"/>
-
-        <!-- Input Fields -->
-        <TextView android:text="Full name" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="" style="@style/InputStyle"/>
-
-        <TextView android:text="Age" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="" style="@style/InputStyle" android:inputType="number"/>
-
-        <TextView android:text="Year Level" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="" style="@style/InputStyle"/>
-
-        <TextView android:text="Gender" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="" style="@style/InputStyle"/>
-
-        <TextView android:text="What is your favorite music?" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="Paste the URL here" style="@style/InputStyle"/>
-
-        <!-- Stress Activity -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Which activity do you enjoy the most when you’re feeling stressed?"
-            android:textStyle="bold"
-            android:textColor="#2C4B1D"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/luckybones"/>
-
-        <RadioGroup
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Listening to music"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Journaling or writing"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Drawing or doodling"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Talking to a friend"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sleeping or napping"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Breathing or meditation"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Playing games"
-                android:fontFamily="@font/luckybones"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Watching videos or memes"
-                android:fontFamily="@font/luckybones"/>
-        </RadioGroup>
-
-
-        <!-- Mood Check Dropdown (converted to simple text field since spinner is removed) -->
-        <TextView android:text="Would you like to receive mood check-in questions daily?" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="Yes / No" style="@style/InputStyle"/>
-
-        <TextView android:text="Choose your break buddy avatar:" style="@style/LabelStyle" android:fontFamily="@font/luckybones"/>
-        <EditText android:hint="e.g., Panda, Cat..." style="@style/InputStyle"/>
-
-        <!-- One time login -->
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="One time log in"
-            android:textColor="#2C4B1D"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/luckybones"/>
-
-        <!-- Sign Up Button -->
-        <Button
+        <!-- Sign Up Container -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign up"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:backgroundTint="#F7C897"
-            android:textColor="#2C4B1D"
-            android:layout_marginTop="8dp"
-            android:padding="12dp"
-            android:background="@drawable/signup_button" />
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/form_background"
+            android:layout_marginTop="24dp"
+            android:elevation="4dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Sign Up"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2C4B1D"
+                android:fontFamily="@font/luckybones"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Full Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full name"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Age -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:inputType="number"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Year Level -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year Level"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Gender -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Favorite Music -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is your favorite music?"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:fontFamily="@font/luckybones"
+                android:hint="Paste the URL here"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Username -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                style="@style/LabelStyle"
+                android:fontFamily="@font/luckybones"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Sign Up Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/luckybones"
+                android:textColor="#2C4B1D"
+                android:backgroundTint="#D6A05D"
+                android:background="@drawable/signup_button"
+                android:padding="12dp"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

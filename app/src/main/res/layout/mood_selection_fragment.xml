@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1E9C4"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOW ARE YOU?"
+        android:textColor="#2C4B1D"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/luckybones" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Mood"
+        android:textSize="14sp"
+        android:textColor="#2C4B1D"
+        android:fontFamily="@font/luckybones"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Left Arrow -->
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_left" />
+
+    <!-- Mood Display Box -->
+    <LinearLayout
+        android:id="@+id/moodContainer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_box_white"
+        android:padding="16dp"
+        android:layout_centerInParent="true"
+        android:elevation="6dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2C4B1D"
+            android:fontFamily="@font/luckybones"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/ivMood"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/joy"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- Right Arrow -->
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_right" />
+
+    <!-- Skip Button -->
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Skip"
+        android:backgroundTint="#D6A05D"
+        android:textColor="#2C4B1D"
+        android:textStyle="bold"
+        android:fontFamily="@font/luckybones"
+        android:background="@drawable/signup_button" />
+</RelativeLayout>
