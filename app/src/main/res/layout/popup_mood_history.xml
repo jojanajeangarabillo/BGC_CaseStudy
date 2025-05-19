@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6E8B4"
+    android:fontFamily="@font/luckybones">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mood Check-In"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#21421E"
+                android:fontFamily="@font/luckybones" />
+
+            <TextView
+                android:id="@+id/dateTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday, May 18 10:30 AM"
+                android:textSize="12sp"
+                android:textColor="#21421E"
+                android:fontFamily="@font/luckybones" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/moodins"
+            android:contentDescription="Icon" />
+    </RelativeLayout>
+
+    <!-- Mood Section -->
+    <LinearLayout
+        android:id="@+id/moodSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_above="@id/bottomNav"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Label -->
+
+        <!-- Mood History Container -->
+        <LinearLayout
+            android:id="@+id/moodHistoryContainer"
+            android:layout_width="433dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_box_white"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/luckybones"
+                android:text="Previous mood checked-in"
+                android:textColor="#21421E"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/smiley" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/luckybones"
+                    android:text="Happy"
+                    android:textColor="#21421E"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/luckybones"
+                    android:text="Sunday"
+                    android:textColor="#21421E"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/luckybones"
+                    android:text="May 18 08:30 PM"
+                    android:textColor="#21421E"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Month Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/luckybones"
+                android:text="MONTH OF:"
+                android:textColor="#21421E"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/luckybones"
+                android:text="MAY"
+                android:textColor="#21421E"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#21421E"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/homeicon"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/journal"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/resources"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moods"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notif"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

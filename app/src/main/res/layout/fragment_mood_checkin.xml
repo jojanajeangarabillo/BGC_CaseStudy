@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6E8B4">
+    android:background="#C6E8B4"
+    android:fontFamily="@font/luckybones">
 
     <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:layout_above="@id/bottomNav">
+        android:padding="16dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -34,6 +34,7 @@
                         android:text="Mood Check-In"
                         android:textStyle="bold"
                         android:textSize="20sp"
+                        android:fontFamily="@font/luckybones"
                         android:textColor="#21421E" />
 
                     <TextView
@@ -42,6 +43,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sunday, May 18 10:30 AM"
                         android:textSize="12sp"
+                        android:fontFamily="@font/luckybones"
                         android:textColor="#21421E" />
                 </LinearLayout>
 
@@ -54,48 +56,101 @@
                     android:contentDescription="Mood Icon" />
             </RelativeLayout>
 
-            <!-- Mood Grid (POPULATED DYNAMICALLY) -->
+            <!-- Mood Grid (3x3 grid for 8 moods) -->
             <GridLayout
-                android:id="@+id/moodGrid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:columnCount="3"
                 android:layout_marginTop="24dp"
                 android:alignmentMode="alignMargins"
-                android:columnCount="4"
                 android:useDefaultMargins="true"
-                android:gravity="center" />
+                android:gravity="center">
 
-            <!-- Other Input -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other:"
-                android:textStyle="bold"
-                android:textColor="#21421E"
-                android:layout_marginTop="24dp" />
+                <!-- 8 Mood Items -->
+                <!-- Repeat this layout for each mood -->
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/joy" />
+                    <TextView android:text="Happy" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/otherInput"
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/sadness" />
+                    <TextView android:text="Sad" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/embarrassment" />
+                    <TextView android:text="Embarrassed" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/boredom" />
+                    <TextView android:text="Bored" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/anxiety" />
+                    <TextView android:text="Anxious" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/envy" />
+                    <TextView android:text="Envious" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/disgust" />
+                    <TextView android:text="Disgust" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/anger" />
+                    <TextView android:text="Angry" android:textSize="13sp" android:textColor="#21421E" android:fontFamily="@font/luckybones"/>
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- Mood Check-in Box -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Please specify"
-                android:background="@drawable/rounded_edittext"
-                android:padding="12dp"
-                android:textColor="#21421E"
-                android:textColorHint="#888888"
-                android:layout_marginBottom="16dp" />
+                android:orientation="vertical"
+                android:background="@drawable/rounded_box_white"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
 
-            <!-- Check-in Button -->
-            <Button
-                android:id="@+id/checkInBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Check in"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/rounded_button"
-                android:textColor="#21421E"
-                android:layout_marginBottom="24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other:"
+                    android:textStyle="bold"
+                    android:textColor="#21421E"
+                    android:fontFamily="@font/luckybones" />
+
+                <EditText
+                    android:id="@+id/otherInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Please specify"
+                    android:padding="12dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="#21421E"
+                    android:fontFamily="@font/luckybones"
+                    android:textColorHint="#888888"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/checkInBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check in"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_box_white"
+                    android:textColor="#21421E"
+                    android:fontFamily="@font/luckybones"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -110,39 +165,10 @@
         android:background="#21421E"
         android:weightSum="5">
 
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/homeicon"
-            android:layout_gravity="center" />
-
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/journal"
-            android:layout_gravity="center" />
-
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/resources"
-            android:layout_gravity="center" />
-
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/moods"
-            android:layout_gravity="center" />
-
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/notif"
-            android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/homeicon" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/journal" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/resources" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/moods" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/notif" android:layout_gravity="center" />
     </LinearLayout>
 </RelativeLayout>
