@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6E8B4">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_above="@id/bottomNav">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mood Check-In"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#21421E" />
+
+                    <TextView
+                        android:id="@+id/dateTimeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunday, May 18 10:30 AM"
+                        android:textSize="12sp"
+                        android:textColor="#21421E" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/moodIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/moodins"
+                    android:contentDescription="Mood Icon" />
+            </RelativeLayout>
+
+            <!-- Mood Grid (POPULATED DYNAMICALLY) -->
+            <GridLayout
+                android:id="@+id/moodGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="4"
+                android:useDefaultMargins="true"
+                android:gravity="center" />
+
+            <!-- Other Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other:"
+                android:textStyle="bold"
+                android:textColor="#21421E"
+                android:layout_marginTop="24dp" />
+
+            <EditText
+                android:id="@+id/otherInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please specify"
+                android:background="@drawable/rounded_edittext"
+                android:padding="12dp"
+                android:textColor="#21421E"
+                android:textColorHint="#888888"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Check-in Button -->
+            <Button
+                android:id="@+id/checkInBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check in"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_button"
+                android:textColor="#21421E"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#21421E"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/homeicon"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/journal"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/resources"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moods"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notif"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</RelativeLayout>
