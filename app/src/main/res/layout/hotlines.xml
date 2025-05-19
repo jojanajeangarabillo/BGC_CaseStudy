@@ -14,18 +14,18 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/journalTitle"
+            android:id="@+id/hotlineTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/luckybones"
-            android:text="Journal"
+            android:text="Hotlines"
             android:textColor="#21421E"
             android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/dateTime"
-            android:layout_width="wrap_content"
+            android:id="@+id/dateTime2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/luckybones"
             android:text="Sunday, May 18 10:30 AM"
@@ -34,80 +34,60 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/entryContainer"
+        android:id="@+id/hotlinesContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="114dp"
         android:fontFamily="@font/luckybones"
-        android:background="@drawable/rounded_box_white"
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- Repeat for each entry -->
 
-        <TextView
-            android:id="@+id/prevEntriesLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Previous Entries"
-            android:textColor="#21421E"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/luckybones"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/edittext_background"
-            android:padding="12dp"
-            android:text="Title: Ketchup"
+            android:text="Bantay Bata Helpline IGS\n 7AM- 7PM"
+            android:textSize="18sp"
             android:textColor="#21421E"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/luckybones"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/edittext_background"
-            android:padding="12dp"
-            android:text="Title: Ketchup"
             android:fontFamily="@font/luckybones"
-            android:textColor="#21421E"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_box_white"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:padding="12dp"
-            android:fontFamily="@font/luckybones"
-            android:text="Title: Ketchup"
+            android:text="NCMH Crise Hotline\n 24/7"
+            android:textSize="18sp"
             android:textColor="#21421E"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/luckybones"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_box_white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hoepline\n 24/7"
+            android:textSize="18sp"
+            android:textColor="#21421E"
+            android:fontFamily="@font/luckybones"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_box_white"/>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/addEntryButton"
-        android:layout_below="@id/entryContainer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:text="Add Entry"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/luckybones"
-        android:textColor="#21421E"
-        android:backgroundTint="#F7B86B" />
 
-    <!-- Bottom Nav Bar -->
+    <LinearLayout
+        android:id="@+id/plpeerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotlinesContainer"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/peerbrcontainer"
+        android:fontFamily="@font/luckybones"
+        android:orientation="vertical"
+        android:padding="12dp"></LinearLayout>
+
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -124,4 +104,5 @@
         <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/moods" android:layout_gravity="center" />
         <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/notif" android:layout_gravity="center" />
     </LinearLayout>
+
 </RelativeLayout>

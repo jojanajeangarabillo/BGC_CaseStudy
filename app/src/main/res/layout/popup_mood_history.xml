@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="Mood Check-In"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textColor="#21421E"
                 android:fontFamily="@font/luckybones" />
 

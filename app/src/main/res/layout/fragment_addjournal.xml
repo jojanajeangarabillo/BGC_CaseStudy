@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6E8B4"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="32dp"
+    android:fontFamily="@font/luckybones">
+
+    <!-- Header -->
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/journaladdTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/luckybones"
+            android:text="Add Enrty"
+            android:textColor="#21421E"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/luckybones"
+            android:text="Sunday, May 13 10:30 AM"
+            android:textColor="#21421E"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Entry Container -->
+    <LinearLayout
+        android:id="@+id/entryContainer"
+        android:layout_width="360dp"
+        android:layout_height="384dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_box_white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <EditText
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Title"
+            android:padding="10dp"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <!-- Add Entry Button -->
+    <Button
+        android:id="@+id/addEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entryContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:minWidth="120dp"
+        android:paddingVertical="8dp"
+        android:text="Add Entry"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/luckybones"
+        android:textColor="#21421E"
+        android:backgroundTint="#D6A05D" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#21421E"
+        android:gravity="center"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/homeicon"
+            android:layout_gravity="center"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/journal"
+            android:layout_gravity="center"
+            android:contentDescription="Journal" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/resources"
+            android:layout_gravity="center"
+            android:contentDescription="Resources" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/moods"
+            android:layout_gravity="center"
+            android:contentDescription="Moods" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:src="@drawable/notif"
+            android:layout_gravity="center"
+            android:contentDescription="Notifications" />
+    </LinearLayout>
+
+    <!-- Bottom Nav Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#21421E"
+        android:weightSum="5">
+
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/homeicon" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/journal" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/resources" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/moods" android:layout_gravity="center" />
+        <ImageView android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/notif" android:layout_gravity="center" />
+    </LinearLayout>
+</RelativeLayout>
