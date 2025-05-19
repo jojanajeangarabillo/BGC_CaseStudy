@@ -36,7 +36,7 @@
             android:fontFamily="@font/luckybones"
             android:text="PLP TAMBAY"
             android:textColor="@android:color/white"
-            android:textSize="60sp"
+            android:textSize="65sp"
             android:textStyle="bold" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="&quot;Tuning And Mindful Breaks App for Youth&quot;"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@android:color/white"
             android:layout_marginTop="4dp"
             android:textAlignment="center"
@@ -54,8 +54,8 @@
     <!-- Register Button -->
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="156dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/logoContainer"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
@@ -67,7 +67,7 @@
         android:paddingBottom="10dp"
         android:text="Register"
         android:textColor="#2E320E"
-        android:textSize="25sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <!-- Bottom Decorative Image (Optional) -->

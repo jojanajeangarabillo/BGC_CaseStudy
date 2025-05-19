@@ -12,7 +12,7 @@ public class signUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        // Apply padding for system UI (status bar, nav bar, etc.)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             v.setPadding(
                     insets.getInsets(WindowInsetsCompat.Type.systemBars()).left,
@@ -23,7 +23,6 @@ public class signUpActivity extends AppCompatActivity {
             return insets;
         });
 
-        // You can initialize other fields or buttons here as needed.
-        // For example: Button signUpBtn = findViewById(R.id.signUpButton);
+
     }
 }
