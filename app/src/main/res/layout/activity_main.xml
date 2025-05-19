@@ -6,7 +6,6 @@
     android:background="@drawable/plptambay"
     android:padding="16dp">
 
-    <!-- App Logo and Title -->
     <LinearLayout
         android:id="@+id/logoContainer"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         android:layout_marginTop="60dp"
         android:fontFamily="@font/luckybones">
 
-        <!-- Logo -->
         <ImageView
             android:id="@+id/logoImage"
             android:layout_width="132dp"
@@ -25,9 +23,6 @@
             android:contentDescription="App Logo"
             android:src="@drawable/tambaylogo" />
 
-        <!-- App Name -->
-
-        <!-- Tagline -->
         <TextView
             android:id="@+id/appName"
             android:layout_width="wrap_content"
@@ -43,7 +38,7 @@
             android:id="@+id/tagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&quot;Tuning And Mindful Breaks App for Youth&quot;"
+            android:text="“Tuning And Mindful Breaks App for Youth”"
             android:textSize="20sp"
             android:textColor="@android:color/white"
             android:layout_marginTop="4dp"
@@ -51,7 +46,6 @@
             android:fontFamily="@font/luckybones"/>
     </LinearLayout>
 
-    <!-- Register Button -->
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
@@ -70,5 +64,10 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-    <!-- Bottom Decorative Image (Optional) -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/registerButton"
+        android:layout_marginTop="20dp"/>
 </RelativeLayout>
